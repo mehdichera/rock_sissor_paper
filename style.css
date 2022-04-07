@@ -1,0 +1,29 @@
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 285px;
+   background-color: gray;
+}
+.container {  
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   gap: 3px;
+}
+button {
+    color: black;
+    padding: 10px 40px;
+    font-size: 25px;
+}
+.container2 {
+    display: flex;
+    gap: 8px;
+}
+.score {
+    font-size: 20px;
+}
+.result {
+    font-size: 20px;
+}
