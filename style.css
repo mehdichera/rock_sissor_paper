@@ -2,28 +2,63 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   margin-top: 285px;
-   background-color: gray;
-}
-.container {  
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-   gap: 3px;
 }
 button {
-    color: black;
-    padding: 10px 40px;
-    font-size: 25px;
+    background-color: transparent;
+    border: none;
 }
-.container2 {
+.container5 {
     display: flex;
-    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 180px;
+    margin-top: 60px;
 }
+.container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.container4 {
+    margin-top: 20px;
+    text-align: center;
+    height: 56px;
+}
+
 .score {
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: bold;
 }
 .result {
+    font-weight: bold;
+    font-size: 25px;
+}
+#plscore{
+    width: 69px;
+    height: 40px;
+    background-color: white;
+    text-align: center;
+    font-size: 25px;
+}
+#comscore{
+    width: 69px;
+    height: 40px;
+    text-align: center;
+    font-size: 25px;
+}
+.container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 340px;
+    font-weight: bold;
     font-size: 20px;
 }
+img{
+    border-radius: 200px;
+    width: 170px;
+    height: 170px;
+}
+
+

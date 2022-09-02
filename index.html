@@ -4,82 +4,34 @@
         <meta charset="UTF-8">
         <title>rock_sissors_paper game</title>
         <link rel="stylesheet" href="style.css">
+        <script src="./javascript.js" defer></script>
     </head>
     <body>
-        <div class="container">
+        <div id="container">
         <div class="container2">
-        <button id="rock">rock</button>
-        <button id="sissors">sissors</button>
-        <button id="paper">paper</button>
+            <div>
+             Player:
+             <div id="plscore">0</div>
+            </div>
+            <div>
+             Computer:
+             <div id="comscore">0</div>
+            </div>
+        </div>
+        <div class="container3">
+        <button id="rock">
+            <img src="./images/rock.png">
+        </button>
+       </div>
+       <div class="container4"></div>
+        <div class="container5">
+        <button id="scissors">
+            <img src="./images/scissors.png">
+        </button>
+        <button id="paper">
+            <img src="./images/paper.png">
+        </button>
         </div>
         </div> 
-        
-        <script>
-   
-               let ps=0
-               let cs=0
-               let container = document.querySelector('div');
-               let div = document.createElement('div');
-               div.classList.add('score');
-               let div2 = document.createElement('div');
-               div2.classList.add('result');
-               let buttons = document.querySelectorAll('button'); 
-               buttons.forEach(button => {
-                 button.addEventListener('click',() =>{
-                      let pls = button.getAttribute('id'); 
-                      function computerplay (){
-                      let y = Math.random();
-                       if (y>=0 && y<=0.333){
-                         return "rock";
-                        }
-                       else if (y>0.333 && y<=0.666){
-                         return "sissors";
-                        }
-                        else {
-                         return "paper";
-                       } 
-                     };
-                      let coms = computerplay ();
-                      let result = (playround(pls,coms));
-                      if (result == "win"){
-                        ps++;
-                        div.textContent = "you win "+"player score: "+ps+"/"+"computer score: "+cs;
-                       }
-                      else if(result == "lose"){
-                        cs++;  
-                        div.textContent = "you lose "+"player score: "+ps+"/"+"computer score: "+cs;
-                      }
-                      else{
-                        div.textContent = "draw "+"player score: "+ps+"/"+"computer score: "+cs;
-                      }
-                      if (cs==5){
-                        div2.textContent ="the winner is computer";
-                        cs=0;
-                        ps=0
-                      }
-                      else if (ps==5){
-                        div2.textContent ="the winner is player";
-                        cs=0;
-                        ps=0;
-                      }
-                      else{
-                        div2.textContent ="";
-                      }
-                 })
-                });
-               container.appendChild(div);
-               container.appendChild(div2);
-               function playround (pls,coms) {
-                  if( coms=="rock" && pls == "sissors"|| coms == "sissors" && pls == "paper"|| coms =="paper" && pls == "rock"){
-                     return "lose";
-                    }
-                  else if( coms=="rock" && pls == "rock"|| coms == "sissors" && pls == "sissors"|| coms =="paper" && pls == "paper"){
-                     return "draw";
-                    }
-                  else {
-                      return "win";
-                    }
-                };  
-        </script>
     </body>
 </html>
